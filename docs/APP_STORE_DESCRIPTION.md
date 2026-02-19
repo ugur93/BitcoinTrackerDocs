@@ -4,51 +4,53 @@
 `Bitcoin Tracker`
 
 ## Subtitle (30 chars max)
-`Bitcoin Price, Alerts, Portfolio`
+`Price, Alerts, Portfolio`
 
 ## Promotional Text (170 chars max)
-A Bitcoin-only command center: live BTC price, mempool and halving intel, smart alerts, and serious portfolio tracking built for stackers, not multicoin noise.
+A focused Bitcoin tracker: live price, mempool stats, custom alerts, and secure portfolio tracking. No distractions, just Bitcoin.
 
 ## Keywords (100 chars max, comma-separated)
-`bitcoin,btc,crypto,price,alerts,portfolio,dca,halving,correlation,market`
+`bitcoin,btc,price,alerts,portfolio,tracker,sats,halving,mempool,market`
 
 ## Description
-Bitcoin Tracker is built for one asset: Bitcoin.
+Bitcoin Tracker is a dedicated app for tracking your Bitcoin stack and watching the market.
 
-Most multicoin apps optimize for ticker lists and noise.
-Bitcoin Tracker is built for signal, conviction, and execution.
+Most crypto apps are cluttered with thousands of coins you don't care about. Bitcoin Tracker is designed to give you a clear, focused view of the only asset that matters to you.
 
 What you can do:
-- Track BTC in real time with clean, interactive charts.
-- Monitor price action across your preferred fiat markets.
-- Set above/below alerts and review trigger history.
-- Follow Bitcoin network health: block height, mempool pressure, fees, supply progress, and halving ETA.
-- Track your stack using both wallet addresses and manual transactions.
-- Edit transaction metadata (classification, cost basis, fees, notes) for clearer P&L.
-- Import/export transactions (CSV/PDF) for external workflows.
-- Set a stack goal in BTC and track remaining sats to target.
+- View live BTC price action with clean, interactive charts.
+- Monitor price across different fiat currencies.
+- Set custom price alerts to get notified when it matters.
+- Check network stats: block height, fees, and halving progress.
+- Track your portfolio by adding wallet addresses or entering transactions manually.
+- Organize your history with notes and cost basis editing.
+- Export your data (CSV/PDF) for your own records.
+- Set a goal and track your progress in satoshis.
 
-Why Bitcoin-only beats multicoin trackers:
-- No altcoin clutter, no coin-hopping UX, no distraction.
-- Bitcoin-native context first: halving cycles, ATH drawdowns, DCA outcomes, and macro correlation.
-- Built for stackers who want depth, speed, and clarity in one app.
+Designed for focus:
+- No altcoin clutter or distractions.
+- Built-in tools for halving cycles and DCA calculations.
+- Clean, dark-mode interface that’s easy on the eyes.
 
-HODLER PRO unlocks:
-- Technical analysis with indicator overlays and signal summaries.
-- Cycles & halving analysis, monthly returns heatmaps, and drawdown intelligence.
-- Correlation (BTC vs S&P, Nasdaq, Gold), corporate treasury tracking, and advanced analytics.
-- Live 1-second price updates and expanded limits.
+HODLER PRO features:
+- Advanced technical indicators for deeper chart analysis.
+- Cycle analysis tools and monthly return heatmaps.
+- Macro correlation data (S&P 500, Gold).
+- Faster, 1-second price updates.
 
-Privacy and control:
-- Portfolio data and preferences are stored locally on your device.
-- No brokerage execution. No custodial wallet functionality.
+Privacy first:
+- Your portfolio data stays on your device.
+- No account required to use the core features.
+- We don't track your identity or sell your data.
 
 Important:
-- Bitcoin Tracker provides market data and portfolio tools.
-- It does not provide financial, investment, or tax advice.
+- Bitcoin Tracker is a tool for viewing data and tracking your portfolio.
+- It is not a wallet and does not hold custody of your funds.
+- It is not an exchange and does not execute trades.
+- It does not provide financial advice.
 
 ## What's New Template
-`This update improves chart intelligence navigation, transaction editing UX, and overall release readiness with updated privacy and subscription configuration.`
+`Improvements to chart navigation, transaction editing, and general performance updates.`
 
 ## Support URL (fill in)
 `https://YOUR_DOMAIN/support`
