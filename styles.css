@@ -44,9 +44,11 @@ a:hover {
 header {
   border-bottom: 1px solid var(--border-color);
   padding: 1.5rem 0;
-  position: sticky; /* Make header sticky */
+  position: sticky;
+  /* Make header sticky */
   top: 0;
-  background-color: rgba(17, 17, 17, 0.95); /* Semi-transparent background */
+  background-color: rgba(17, 17, 17, 0.95);
+  /* Semi-transparent background */
   backdrop-filter: blur(10px);
   z-index: 100;
 }
@@ -64,7 +66,8 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none; /* Remove underline from logo link */
+  text-decoration: none;
+  /* Remove underline from logo link */
 }
 
 .logo-icon {
@@ -83,13 +86,14 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: var(--btc-orange);
 }
 
 /* Hero Section */
 .hero {
-  padding: 8rem 0 6rem;
+  padding: 8rem 0 0rem;
   text-align: center;
 }
 
@@ -137,7 +141,7 @@ nav a:hover, nav a.active {
 
 /* Features Grid */
 .features {
-  padding: 6rem 0;
+  padding: 0rem 0;
   background-color: var(--bg-dark);
 }
 
@@ -198,87 +202,88 @@ nav a:hover, nav a.active {
 }
 
 .philosophy h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .philosophy ul {
-    list-style: none;
-    text-align: left;
-    margin-top: 2rem;
+  list-style: none;
+  text-align: left;
+  margin-top: 2rem;
 }
 
 .philosophy li {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    font-size: 1.1rem;
-    color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
 }
 
 .philosophy li::before {
-    content: "✓";
-    color: var(--btc-orange);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+  content: "✓";
+  color: var(--btc-orange);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
 }
 
 
 /* Pro Section */
 .pro-features {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .pro-badge {
-    background-color: var(--btc-orange);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    vertical-align: middle;
-    margin-left: 0.5rem;
+  background-color: var(--btc-orange);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 0.5rem;
 }
 
 /* Policy Pages */
 .policy-content {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 var(--spacing-unit);
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 var(--spacing-unit);
 }
 
 .policy-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
 }
 
 .policy-content h2 {
-    font-size: 1.75rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .policy-content h3 {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
 }
 
-.policy-content p, .policy-content ul {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
+.policy-content p,
+.policy-content ul {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
 }
 
 .policy-content ul {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .policy-content li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -286,7 +291,8 @@ nav a:hover, nav a.active {
 footer {
   border-top: 1px solid var(--border-color);
   padding: 4rem 0;
-  margin-top: auto; /* Push footer to bottom */
+  margin-top: auto;
+  /* Push footer to bottom */
   background-color: var(--bg-dark);
 }
 
@@ -323,12 +329,12 @@ footer {
   .hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .nav-container {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   nav ul {
     gap: 1rem;
     font-size: 0.9rem;
