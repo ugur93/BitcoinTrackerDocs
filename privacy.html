@@ -28,7 +28,7 @@
 
     <main class="container policy-content">
         <h1>Privacy Policy</h1>
-        <p><strong>Effective date:</strong> 2026-02-18<br>
+        <p><strong>Effective date:</strong> 2026-09-27<br>
             <strong>App:</strong> Bitcoin Tracker<br>
             <strong>Contact:</strong> proventuspro@protonmail.com
         </p>
@@ -42,7 +42,11 @@
         <h3>2.1 Data you enter</h3>
         <ul>
             <li>Portfolio transaction entries (amounts, prices, notes, timestamps).</li>
-            <li>Wallet addresses you choose to track.</li>
+            <li>Wallet addresses and extended public keys (xpub, ypub, zpub) you choose to track. Extended public keys
+                are stored only on your device. The app derives the wallet's addresses on the device and looks up
+                their balances and transactions at public block explorers (Blockstream and mempool.space). The
+                extended key itself is never sent anywhere. Extended public keys can only view a wallet, never spend
+                from it, and the app rejects private keys.</li>
             <li>App preferences (currency, display settings, feature toggles).</li>
         </ul>
 
@@ -61,7 +65,22 @@
             <li>Anonymous app user identifiers used for subscription state.</li>
         </ul>
 
-        <h3>2.4 Market/network data</h3>
+        <h3>2.4 Instant alerts, daily brief and weekly recap (Hodler Pro)</h3>
+        <p>If you subscribe to Hodler Pro and allow notifications, the app sends the following to our alerts server
+            (hosted on Cloudflare) so it can notify you when the app is closed:</p>
+        <ul>
+            <li>Your price alerts (direction, target price, currency, on/off state).</li>
+            <li>The kind and threshold of each indicator alert (24h move, Mayer Multiple, fee rate or Hash Ribbons).
+            </li>
+            <li>Your daily brief and weekly recap settings (on/off, delivery time, time zone, currency).</li>
+            <li>A push notification token, a random install identifier created by the app, and the anonymous
+                RevenueCat app user identifier used to confirm your subscription.</li>
+        </ul>
+        <p>Portfolio transactions, wallet addresses, extended public keys and balances are never sent to the alerts
+            server. Notifications are delivered through Expo's push service and Apple Push Notification service, which
+            receive the push token and the notification text.</p>
+
+        <h3>2.5 Market/network data</h3>
         <p>The app requests public market and blockchain-related data from third-party endpoints (for example, pricing
             and network statistics providers). Those providers may receive your IP address and standard request
             metadata.</p>
@@ -82,7 +101,13 @@
 
         <h2>5. Data Storage and Retention</h2>
         <ul>
-            <li>Portfolio and alert data is stored locally on your device by default.</li>
+            <li>Portfolio data, wallet addresses and extended public keys are stored only on your device.</li>
+            <li>Alert data is stored on your device. For Hodler Pro users with notifications allowed, alerts, daily
+                brief and weekly recap settings are also stored on the alerts server. They are deleted when you turn
+                off all alerts, the daily brief and the weekly recap, when your subscription lapses and the app next
+                syncs, or when the push token stops working (for example after you uninstall the app). Records of
+                fired alerts are kept for up to 30 days.</li>
+            <li>Tax reports (CSV/PDF) are generated on your device and only leave it if you choose to share them.</li>
             <li>Subscription entitlement data is managed by Apple/RevenueCat as required for purchases.</li>
             <li>Retention duration depends on your device state, app uninstall, and provider retention policies.</li>
         </ul>
@@ -92,7 +117,13 @@
         <ul>
             <li><strong>RevenueCat</strong> (subscription management).</li>
             <li><strong>Apple</strong> (in-app purchase processing).</li>
-            <li><strong>Market/network data providers</strong> used by the app.</li>
+            <li><strong>Cloudflare</strong> (hosts the alerts server for Hodler Pro alerts, daily brief and weekly
+                recap).</li>
+            <li><strong>Expo</strong> and <strong>Apple Push Notification service</strong> (deliver push
+                notifications).</li>
+            <li><strong>Market/network data providers</strong> used by the app (for example CoinGecko, Coinbase,
+                Yahoo Finance, Blockstream and mempool.space). They receive requests for public data, not your
+                portfolio.</li>
         </ul>
         <p>We may disclose information if required by law.</p>
 
@@ -101,6 +132,8 @@
         <ul>
             <li>Delete local app data from in-app settings (where available) or by uninstalling the app.</li>
             <li>Disable notifications at the OS level.</li>
+            <li>Stop server-side alerts by turning off alerts, the Daily Market Brief and the Weekly Recap in the app.
+            </li>
             <li>Manage subscriptions in your Apple ID subscription settings.</li>
         </ul>
 

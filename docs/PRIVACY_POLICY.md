@@ -1,42 +1,42 @@
 # Privacy Policy
 
-**Effective date:** 2026-02-18
-**App:** Bitcoin Tracker
+**Effective date:** 2026-09-27  
+**App:** Bitcoin Tracker  
 **Contact:** proventuspro@protonmail.com
 
 ## 1. Scope
-
 This Privacy Policy explains how Bitcoin Tracker ("we", "our", "us") handles information when you use the mobile application.
 
 ## 2. Data We Process
-
 ### 2.1 Data you enter
-
 - Portfolio transaction entries (amounts, prices, notes, timestamps).
-- Wallet addresses you choose to track.
+- Wallet addresses and extended public keys (xpub, ypub, zpub) you choose to track. Extended public keys are stored only on your device. The app derives the wallet's addresses on the device and looks up their balances and transactions at public block explorers (Blockstream and mempool.space). The extended key itself is never sent anywhere. Extended public keys can only view a wallet, never spend from it, and the app rejects private keys.
 - App preferences (currency, display settings, feature toggles).
 
 ### 2.2 Data from device/app usage
-
 - Notification permission status and local notification settings.
 - App diagnostics needed for core functionality (when available from platform APIs).
 
 ### 2.3 Subscription and purchase data
-
 If you use paid features, subscription and entitlement events are processed via Apple and RevenueCat (our subscription infrastructure provider), such as:
-
 - Product identifiers.
 - Purchase state / entitlement status.
 - Anonymous app user identifiers used for subscription state.
 
-### 2.4 Market/network data
+### 2.4 Instant alerts and daily brief (Hodler Pro)
+If you subscribe to Hodler Pro and allow notifications, the app sends the following to our alerts server (hosted on Cloudflare) so it can notify you when the app is closed:
+- Your price alerts (direction, target price, currency, on/off state).
+- Your daily brief and weekly recap settings (on/off, delivery time, time zone, currency).
+- The kind and threshold of each indicator alert (24h move, Mayer Multiple, fee rate or Hash Ribbons).
+- A push notification token, a random install identifier created by the app, and the anonymous RevenueCat app user identifier used to confirm your subscription.
 
+Portfolio transactions, wallet addresses, extended public keys and balances are never sent to the alerts server. Notifications are delivered through Expo's push service and Apple Push Notification service, which receive the push token and the notification text.
+
+### 2.5 Market/network data
 The app requests public market and blockchain-related data from third-party endpoints (for example, pricing and network statistics providers). Those providers may receive your IP address and standard request metadata.
 
 ## 3. How We Use Data
-
 We use data to:
-
 - Deliver app functionality (charts, alerts, portfolio analytics).
 - Sync/validate subscription entitlement status.
 - Improve reliability and prevent abuse.
@@ -45,50 +45,44 @@ We use data to:
 We do not sell your personal data.
 
 ## 4. Tracking and Advertising
-
-Bitcoin Tracker is not designed for cross-app advertising tracking.
+Bitcoin Tracker is not designed for cross-app advertising tracking.  
 If this changes, we will update this policy and request required platform permissions.
 
 ## 5. Data Storage and Retention
-
-- Portfolio and alert data is stored locally on your device by default.
+- Portfolio data, wallet addresses and extended public keys are stored only on your device.
+- Alert data is stored on your device. For Hodler Pro users with notifications allowed, alerts, daily brief and weekly recap settings are also stored on the alerts server. They are deleted when you turn off all alerts, the daily brief and the weekly recap, when your subscription lapses and the app next syncs, or when the push token stops working (for example after you uninstall the app). Records of fired alerts are kept for up to 30 days.
+- Tax reports (CSV/PDF) are generated on your device and only leave it if you choose to share them.
 - Subscription entitlement data is managed by Apple/RevenueCat as required for purchases.
 - Retention duration depends on your device state, app uninstall, and provider retention policies.
 
 ## 6. Data Sharing
-
 We may share limited data with service providers strictly to operate the app:
-
 - **RevenueCat** (subscription management).
+- **Cloudflare** (hosts the alerts server for Hodler Pro alerts, daily brief and weekly recap).
+- **Expo** and **Apple Push Notification service** (deliver push notifications).
 - **Apple** (in-app purchase processing).
-- **Market/network data providers** used by the app.
+- **Market/network data providers** used by the app (for example CoinGecko, Coinbase, Yahoo Finance, Blockstream and mempool.space). They receive requests for public data, not your portfolio.
 
 We may disclose information if required by law.
 
 ## 7. Your Choices
-
 You can:
-
 - Delete local app data from in-app settings (where available) or by uninstalling the app.
 - Disable notifications at the OS level.
+- Stop server-side alerts by turning off alerts, the Daily Market Brief and the Weekly Recap in the app.
 - Manage subscriptions in your Apple ID subscription settings.
 
 ## 8. Children
-
 The app is not directed to children under 13 (or equivalent minimum age in your jurisdiction).
 
 ## 9. International Transfers
-
 Service providers may process data in countries different from your residence. We rely on provider safeguards where applicable.
 
 ## 10. Security
-
 We use reasonable technical and organizational measures to protect information. No system is guaranteed to be 100% secure.
 
 ## 11. Changes to This Policy
-
 We may update this policy. Material changes will be reflected by updating the effective date and, where required, providing notice.
 
 ## 12. Contact
-
 For privacy questions or requests, contact: proventuspro@protonmail.com
