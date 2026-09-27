@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayer Multiple Today – What It Is and How to Read It</title>
+    <meta name="description" content="The Mayer Multiple compares the Bitcoin price with its 200-day average. See today’s value, the historical zones, and how the Pi Cycle Top relates.">
+    <link rel="canonical" href="https://ugur93.github.io/BitcoinTrackerDocs/mayer-multiple.html">
+    <meta name="apple-itunes-app" content="app-id=6759337610">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bitcoin Tracker">
+    <meta property="og:title" content="Mayer Multiple Today – What It Is and How to Read It">
+    <meta property="og:description" content="The Mayer Multiple compares the Bitcoin price with its 200-day average. See today’s value, the historical zones, and how the Pi Cycle Top relates.">
+    <meta property="og:url" content="https://ugur93.github.io/BitcoinTrackerDocs/mayer-multiple.html">
+    <meta property="og:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mayer Multiple Today – What It Is and How to Read It">
+    <meta name="twitter:description" content="The Mayer Multiple compares the Bitcoin price with its 200-day average. See today’s value, the historical zones, and how the Pi Cycle Top relates.">
+    <meta name="twitter:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Mayer Multiple Today \u2013 What It Is and How to Read It", "description": "The Mayer Multiple compares the Bitcoin price with its 200-day average. See today\u2019s value, the historical zones, and how the Pi Cycle Top relates.", "url": "https://ugur93.github.io/BitcoinTrackerDocs/mayer-multiple.html", "dateModified": "2026-09-27", "publisher": {"@type": "Organization", "name": "Bitcoin Tracker"}}</script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">₿</span> Bitcoin Tracker
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guides.html" class="active">Guides</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container policy-content guide-content">
+        <h1>Mayer Multiple: Bitcoin price vs its 200-day average</h1>
+        <p class="lead">The Mayer Multiple is the Bitcoin price divided by its 200-day simple moving average. It
+            tells you how stretched the price is compared with the last seven months.</p>
+
+        <div class="calc">
+            <div class="calc-results">
+                <div><span>Price now</span><strong id="mm-price">–</strong></div>
+                <div><span>200-day average</span><strong id="mm-sma">–</strong></div>
+                <div><span>Mayer Multiple</span><strong id="mm-value">–</strong></div>
+                <div><span>Zone</span><strong id="mm-zone">–</strong></div>
+            </div>
+            <p class="hero-meta" id="mm-note">Daily closes from Coinbase.</p>
+        </div>
+
+        <h2>Historical zones</h2>
+        <ul>
+            <li><strong>Below 0.8:</strong> deep discount. Historically rare, and it has marked cheap periods.</li>
+            <li><strong>0.8 to 1.5:</strong> normal range.</li>
+            <li><strong>1.5 to 2.4:</strong> elevated. The price is well above its trend.</li>
+            <li><strong>Above 2.4:</strong> overheated. Past cycle tops happened here.</li>
+        </ul>
+
+        <h2>Pi Cycle Top</h2>
+        <p>A related signal compares the 111-day average with twice the 350-day average. When the 111-day line
+            crosses above, it has lined up with previous cycle tops within a few days. Like the Mayer Multiple it
+            looks backwards and can fail in a new cycle.</p>
+
+        <h2>Limits</h2>
+        <p>Both indicators describe where the price is relative to its own past. They are useful context, not
+            timing tools, and this page is not financial advice.</p>
+
+        <div class="app-cta">
+            <img class="app-icon" src="img/icon-256.png" alt="" width="64" height="64">
+            <p>Bitcoin Tracker charts the Mayer Multiple and the Pi Cycle Top with Bitcoin’s full history, and with Hodler Pro it pushes an alert when the Mayer Multiple crosses the level you set.</p>
+            <a class="store-badge" href="https://apps.apple.com/app/id6759337610"><img src="img/app-store-badge.svg" alt="Download on the App Store"></a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2026 Bitcoin Tracker. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="mailto:proventuspro@protonmail.com">Support</a>
+                <a href="guides.html">Guides</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var fmt = function (v) { return '$' + Math.round(v).toLocaleString('en-US'); };
+            var url = 'https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400';
+            fetch(url).then(function (r) { return r.json(); }).then(function (rows) {
+                // Rows are [time, low, high, open, close, volume], newest first.
+                var closes = rows.map(function (r) { return r[4]; });
+                if (closes.length < 200) { throw new Error('short'); }
+                var sma = closes.slice(0, 200).reduce(function (a, b) { return a + b; }, 0) / 200;
+                var price = closes[0], mm = price / sma;
+                var zone = mm < 0.8 ? 'Deep discount' : mm > 2.4 ? 'Overheated' : mm > 1.5 ? 'Elevated' : 'Normal';
+                document.getElementById('mm-price').textContent = fmt(price);
+                document.getElementById('mm-sma').textContent = fmt(sma);
+                document.getElementById('mm-value').textContent = mm.toFixed(2);
+                document.getElementById('mm-zone').textContent = zone;
+            }).catch(function () {
+                document.getElementById('mm-note').textContent = 'Live data is unavailable right now. The app shows it with full history.';
+            });
+        })();
+    </script>
+</body>
+
+</html>

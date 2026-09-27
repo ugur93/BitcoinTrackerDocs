@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Power Law Fair Value Today – Calculator and Explanation</title>
+    <meta name="description" content="What the Bitcoin power-law model says the price should be today, where its historical floor sits, and how to read it. Free calculator, no sign-up.">
+    <link rel="canonical" href="https://ugur93.github.io/BitcoinTrackerDocs/bitcoin-power-law.html">
+    <meta name="apple-itunes-app" content="app-id=6759337610">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bitcoin Tracker">
+    <meta property="og:title" content="Bitcoin Power Law Fair Value Today – Calculator and Explanation">
+    <meta property="og:description" content="What the Bitcoin power-law model says the price should be today, where its historical floor sits, and how to read it. Free calculator, no sign-up.">
+    <meta property="og:url" content="https://ugur93.github.io/BitcoinTrackerDocs/bitcoin-power-law.html">
+    <meta property="og:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bitcoin Power Law Fair Value Today – Calculator and Explanation">
+    <meta name="twitter:description" content="What the Bitcoin power-law model says the price should be today, where its historical floor sits, and how to read it. Free calculator, no sign-up.">
+    <meta name="twitter:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bitcoin Power Law Fair Value Today \u2013 Calculator and Explanation", "description": "What the Bitcoin power-law model says the price should be today, where its historical floor sits, and how to read it. Free calculator, no sign-up.", "url": "https://ugur93.github.io/BitcoinTrackerDocs/bitcoin-power-law.html", "dateModified": "2026-09-27", "publisher": {"@type": "Organization", "name": "Bitcoin Tracker"}}</script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">₿</span> Bitcoin Tracker
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guides.html" class="active">Guides</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container policy-content guide-content">
+        <h1>Bitcoin power law: fair value today</h1>
+        <p class="lead">The power-law model fits Bitcoin's whole price history to a single straight line on a log-log
+            chart. It gives a "fair value" for any date and a floor the price has rarely closed below.</p>
+
+        <div class="calc" id="pl-calc">
+            <label for="pl-date">Date</label>
+            <input type="date" id="pl-date" min="2010-07-18" max="2045-12-31">
+            <div class="calc-results">
+                <div><span>Model fair value</span><strong id="pl-fair">–</strong></div>
+                <div><span>Historical floor (0.42×)</span><strong id="pl-floor">–</strong></div>
+                <div><span>Price now</span><strong id="pl-price">–</strong></div>
+                <div><span>Price vs fair value</span><strong id="pl-ratio">–</strong></div>
+            </div>
+        </div>
+
+        <h2>The formula</h2>
+        <p>The version used here and in the Bitcoin Tracker app:</p>
+        <p><code>fair value (USD) = 1.0117 × 10<sup>-17</sup> × days<sup>5.82</sup></code></p>
+        <p>where <code>days</code> is the number of days since the genesis block on 3 January 2009. Because the
+            exponent is fixed, the model's growth rate slows every year: it rose roughly 40% a year in the early 2020s
+            and keeps falling from there.</p>
+
+        <h2>How to read it</h2>
+        <ul>
+            <li><strong>Above fair value:</strong> the price has run ahead of the long-term trend. Cycle tops have sat
+                several times above the line.</li>
+            <li><strong>Near the floor (0.42×):</strong> bear-market lows have clustered here. The price has rarely
+                closed below it.</li>
+            <li><strong>Between the two:</strong> most of Bitcoin's history.</li>
+        </ul>
+
+        <h2>Limits</h2>
+        <p>The power law is a curve fitted to the past, not a law of nature. It says nothing about when the price
+            will move, and a fit can break. Use it as one lens next to others, such as the <a
+                href="mayer-multiple.html">Mayer Multiple</a>, and never as a sole reason to buy or sell. This page is
+            not financial advice.</p>
+
+        <div class="app-cta">
+            <img class="app-icon" src="img/icon-256.png" alt="" width="64" height="64">
+            <p>Bitcoin Tracker shows the power-law fair value, the Mayer Multiple and the Pi Cycle Top on a chart with today’s price, and can push you an alert when the Mayer Multiple crosses a level you choose.</p>
+            <a class="store-badge" href="https://apps.apple.com/app/id6759337610"><img src="img/app-store-badge.svg" alt="Download on the App Store"></a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2026 Bitcoin Tracker. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="mailto:proventuspro@protonmail.com">Support</a>
+                <a href="guides.html">Guides</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var GENESIS = Date.UTC(2009, 0, 3), DAY = 86400000;
+            var input = document.getElementById('pl-date');
+            var fmt = function (v) { return '$' + Math.round(v).toLocaleString('en-US'); };
+            var price = null;
+            var fair = function (ms) { return 1.0117e-17 * Math.pow(Math.max(1, (ms - GENESIS) / DAY), 5.82); };
+            function render() {
+                var ms = input.value ? Date.parse(input.value + 'T00:00:00Z') : Date.now();
+                var f = fair(ms);
+                document.getElementById('pl-fair').textContent = fmt(f);
+                document.getElementById('pl-floor').textContent = fmt(f * 0.42);
+                var today = fair(Date.now());
+                document.getElementById('pl-price').textContent = price ? fmt(price) : 'unavailable';
+                document.getElementById('pl-ratio').textContent = price ? (price / today).toFixed(2) + '× (today)' : '–';
+            }
+            input.value = new Date().toISOString().slice(0, 10);
+            input.addEventListener('input', render);
+            render();
+            fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot').then(function (r) { return r.json(); })
+                .then(function (j) { price = parseFloat(j.data.amount); render(); }).catch(function () { });
+        })();
+    </script>
+</body>
+
+</html>

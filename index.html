@@ -4,12 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin Tracker - Price, Alerts, Portfolio</title>
-    <meta name="description"
-        content="A focused Bitcoin tracker: live price, mempool stats, custom alerts, and secure portfolio tracking. No distractions, just Bitcoin.">
+    <title>Bitcoin Tracker – Bitcoin-Only Price, Alerts and Portfolio for iPhone</title>
+    <meta name="description" content="A Bitcoin-only iPhone app: live price, instant alerts, portfolio with real cost basis, hardware wallet tracking via xpub, valuation models and widgets. No account.">
+    <link rel="canonical" href="https://ugur93.github.io/BitcoinTrackerDocs/">
+    <meta name="apple-itunes-app" content="app-id=6759337610">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bitcoin Tracker">
+    <meta property="og:title" content="Bitcoin Tracker – Bitcoin-Only Price, Alerts and Portfolio for iPhone">
+    <meta property="og:description" content="A Bitcoin-only iPhone app: live price, instant alerts, portfolio with real cost basis, hardware wallet tracking via xpub, valuation models and widgets. No account.">
+    <meta property="og:url" content="https://ugur93.github.io/BitcoinTrackerDocs/">
+    <meta property="og:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bitcoin Tracker – Bitcoin-Only Price, Alerts and Portfolio for iPhone">
+    <meta name="twitter:description" content="A Bitcoin-only iPhone app: live price, instant alerts, portfolio with real cost basis, hardware wallet tracking via xpub, valuation models and widgets. No account.">
+    <meta name="twitter:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+    <link rel="icon" type="image/png" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Bitcoin Tracker: BTC Portfolio", "operatingSystem": "iOS", "applicationCategory": "FinanceApplication", "url": "https://ugur93.github.io/BitcoinTrackerDocs/", "downloadUrl": "https://apps.apple.com/app/id6759337610", "image": "https://ugur93.github.io/BitcoinTrackerDocs/img/icon-256.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
 
 <body>
@@ -21,6 +35,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="guides.html">Guides</a></li>
                     <li><a href="privacy.html">Privacy</a></li>
                     <li><a href="terms.html">Terms</a></li>
                 </ul>
@@ -33,8 +48,18 @@
             <div class="container">
                 <h1>Bitcoin Tracker</h1>
                 <div class="subtitle">Price. Alerts. Portfolio.</div>
-                <p>A focused Bitcoin tracker: live price, mempool stats, custom alerts, and secure portfolio tracking.
-                    No distractions, just Bitcoin.</p>
+                <p>A focused Bitcoin tracker: live price, instant alerts, a portfolio with real cost basis, and
+                    watch-only hardware wallets. No altcoins, no account, and your portfolio stays on your device.</p>
+                <a class="store-badge" href="https://apps.apple.com/app/id6759337610"><img src="img/app-store-badge.svg" alt="Download on the App Store"></a>
+                <div class="hero-meta">Free for iPhone · Hodler Pro unlocks the advanced tools</div>
+            </div>
+            <div class="shots" aria-label="App screenshots">
+                <img src="img/shot-01_price.jpg" alt="Live Bitcoin price chart with market signals" width="540" height="1169" loading="lazy">
+                <img src="img/shot-02_portfolio.jpg" alt="Portfolio with cost basis and profit" width="540" height="1169" loading="lazy">
+                <img src="img/shot-05_alerts.jpg" alt="Network fees and alerts" width="540" height="1169" loading="lazy">
+                <img src="img/shot-04_analytics.jpg" alt="Portfolio analytics" width="540" height="1169" loading="lazy">
+                <img src="img/shot-07_analysis.jpg" alt="Market analysis tools" width="540" height="1169" loading="lazy">
+                <img src="img/shot-09_privacy.jpg" alt="Watch-only addresses and Face ID lock" width="540" height="1169" loading="lazy">
             </div>
         </section>
 
@@ -88,6 +113,29 @@
                     <li>Tools designed specifically for Bitcoiners.</li>
                     <li>Clean, simple interface.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Guides</h2>
+                <div class="grid">
+                    <a class="card" href="bitcoin-power-law.html">
+                        <div class="card-icon">📈</div>
+                        <h3>Power law fair value</h3>
+                        <p>Today's model value and floor, with a free calculator.</p>
+                    </a>
+                    <a class="card" href="mayer-multiple.html">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Mayer Multiple</h3>
+                        <p>How stretched the price is against its 200-day average.</p>
+                    </a>
+                    <a class="card" href="track-hardware-wallet-xpub.html">
+                        <div class="card-icon">🔐</div>
+                        <h3>Watch a hardware wallet</h3>
+                        <p>Track cold storage with an xpub, ypub or zpub.</p>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -145,6 +193,13 @@
                 </div>
             </div>
         </section>
+
+        <section class="hero" style="padding:4rem 0 5rem">
+            <div class="container">
+                <h2 class="section-title">Get Bitcoin Tracker</h2>
+                <a class="store-badge" href="https://apps.apple.com/app/id6759337610"><img src="img/app-store-badge.svg" alt="Download on the App Store"></a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -154,6 +209,7 @@
             </div>
             <div class="footer-links">
                 <a href="mailto:proventuspro@protonmail.com">Support</a>
+                <a href="guides.html">Guides</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
             </div>

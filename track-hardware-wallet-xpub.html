@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track a Hardware Wallet With an xpub, ypub or zpub (Watch-Only)</title>
+    <meta name="description" content="Watch a Ledger, Trezor, Coldcard or other hardware wallet balance on your iPhone without exposing keys. What xpub, ypub and zpub are and how watch-only tracking works.">
+    <link rel="canonical" href="https://ugur93.github.io/BitcoinTrackerDocs/track-hardware-wallet-xpub.html">
+    <meta name="apple-itunes-app" content="app-id=6759337610">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bitcoin Tracker">
+    <meta property="og:title" content="Track a Hardware Wallet With an xpub, ypub or zpub (Watch-Only)">
+    <meta property="og:description" content="Watch a Ledger, Trezor, Coldcard or other hardware wallet balance on your iPhone without exposing keys. What xpub, ypub and zpub are and how watch-only tracking works.">
+    <meta property="og:url" content="https://ugur93.github.io/BitcoinTrackerDocs/track-hardware-wallet-xpub.html">
+    <meta property="og:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Track a Hardware Wallet With an xpub, ypub or zpub (Watch-Only)">
+    <meta name="twitter:description" content="Watch a Ledger, Trezor, Coldcard or other hardware wallet balance on your iPhone without exposing keys. What xpub, ypub and zpub are and how watch-only tracking works.">
+    <meta name="twitter:image" content="https://ugur93.github.io/BitcoinTrackerDocs/img/og-image.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/favicon-64.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Track a Hardware Wallet With an xpub, ypub or zpub (Watch-Only)", "description": "Watch a Ledger, Trezor, Coldcard or other hardware wallet balance on your iPhone without exposing keys. What xpub, ypub and zpub are and how watch-only tracking works.", "url": "https://ugur93.github.io/BitcoinTrackerDocs/track-hardware-wallet-xpub.html", "dateModified": "2026-09-27", "publisher": {"@type": "Organization", "name": "Bitcoin Tracker"}}</script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">₿</span> Bitcoin Tracker
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guides.html" class="active">Guides</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container policy-content guide-content">
+        <h1>Track a hardware wallet with its xpub, ypub or zpub</h1>
+        <p class="lead">An extended public key lets an app see every address in a wallet, and the wallet's balance
+            and history, without being able to spend anything. It is how you watch cold storage from your phone.</p>
+
+        <h2>xpub, ypub and zpub</h2>
+        <ul>
+            <li><strong>xpub</strong>: legacy addresses starting with <code>1</code> (BIP44).</li>
+            <li><strong>ypub</strong>: nested SegWit addresses starting with <code>3</code> (BIP49).</li>
+            <li><strong>zpub</strong>: native SegWit addresses starting with <code>bc1q</code> (BIP84). Most modern
+                wallets use this one.</li>
+        </ul>
+        <p>Your wallet software shows the key under a name such as "extended public key", "account xpub" or
+            "export xpub". Never share anything that starts with <code>xprv</code>, <code>yprv</code> or
+            <code>zprv</code>, or your seed words: those can spend your coins.</p>
+
+        <h2>Why watch instead of adding each address</h2>
+        <p>Hardware wallets give you a new receive address every time and move change to fresh addresses. Tracking
+            single addresses misses coins quickly. With the extended public key, an app can derive every address,
+            find the ones with history and add them up, so the total always matches your wallet.</p>
+
+        <h2>Privacy</h2>
+        <p>An extended public key reveals all past and future addresses of that account. Only give it to software
+            you trust. In Bitcoin Tracker the key is stored only on your iPhone: the app derives the addresses on the
+            device and looks them up at public block explorers (Blockstream, with mempool.space as a fallback). The
+            key itself is never sent anywhere.</p>
+
+        <h2>How to add one in Bitcoin Tracker</h2>
+        <ol>
+            <li>Copy the xpub, ypub or zpub from your wallet software.</li>
+            <li>In the app, open Portfolio and add a wallet.</li>
+            <li>Paste the key. The app scans receive and change addresses and shows the combined balance and
+                transactions.</li>
+        </ol>
+
+        <div class="app-cta">
+            <img class="app-icon" src="img/icon-256.png" alt="" width="64" height="64">
+            <p>Bitcoin Tracker watches whole hardware wallets from an xpub, ypub or zpub, next to your manual buys, with real cost basis and profit. No account, and your portfolio stays on your device.</p>
+            <a class="store-badge" href="https://apps.apple.com/app/id6759337610"><img src="img/app-store-badge.svg" alt="Download on the App Store"></a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2026 Bitcoin Tracker. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="mailto:proventuspro@protonmail.com">Support</a>
+                <a href="guides.html">Guides</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

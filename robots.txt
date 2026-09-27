@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ugur93.github.io/BitcoinTrackerDocs/sitemap.xml
