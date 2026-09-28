@@ -44,7 +44,7 @@
 
     <main class="container policy-content">
         <h1>Privacy Policy</h1>
-        <p><strong>Effective date:</strong> 2026-09-27<br>
+        <p><strong>Effective date:</strong> 2026-09-28<br>
             <strong>App:</strong> Bitcoin Tracker<br>
             <strong>Contact:</strong> proventuspro@protonmail.com
         </p>
@@ -91,9 +91,15 @@
             <li>Your daily brief and weekly recap settings (on/off, delivery time, time zone, currency).</li>
             <li>A push notification token, a random install identifier created by the app, and the anonymous
                 RevenueCat app user identifier used to confirm your subscription.</li>
+            <li>Only if you turn on a transaction alert: the transaction ID and the label you gave it. It is deleted
+                once the transaction confirms or you turn the alert off.</li>
+            <li>Only if you turn on payment alerts for a wallet: that wallet's address, or for an extended public key
+                the next few unused receive addresses, plus the wallet's name and the total amount ever received by
+                those addresses. The extended public key itself is never sent. They are deleted when you turn the
+                alert off.</li>
         </ul>
-        <p>Portfolio transactions, wallet addresses, extended public keys and balances are never sent to the alerts
-            server. Notifications are delivered through Expo's push service and Apple Push Notification service, which
+        <p>Portfolio transactions, extended public keys and balances are never sent to the alerts server, and wallet
+            addresses only as described above when you turn on payment alerts. Notifications are delivered through Expo's push service and Apple Push Notification service, which
             receive the push token and the notification text.</p>
 
         <h3>2.5 Market/network data</h3>
@@ -148,8 +154,8 @@
         <ul>
             <li>Delete local app data from in-app settings (where available) or by uninstalling the app.</li>
             <li>Disable notifications at the OS level.</li>
-            <li>Stop server-side alerts by turning off alerts, the Daily Market Brief and the Weekly Recap in the app.
-            </li>
+            <li>Stop server-side alerts by turning off alerts, the Daily Market Brief, the Weekly Recap, transaction
+                alerts and wallet payment alerts in the app.</li>
             <li>Manage subscriptions in your Apple ID subscription settings.</li>
         </ul>
 

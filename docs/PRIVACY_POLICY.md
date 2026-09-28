@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date:** 2026-09-27  
+**Effective date:** 2026-09-28  
 **App:** Bitcoin Tracker  
 **Contact:** proventuspro@protonmail.com
 
@@ -29,8 +29,10 @@ If you subscribe to Hodler Pro and allow notifications, the app sends the follow
 - Your daily brief and weekly recap settings (on/off, delivery time, time zone, currency).
 - The kind and threshold of each indicator alert (24h move, Mayer Multiple, fee rate or Hash Ribbons).
 - A push notification token, a random install identifier created by the app, and the anonymous RevenueCat app user identifier used to confirm your subscription.
+- Only if you turn on a transaction alert: the transaction ID and the label you gave it. It is deleted once the transaction confirms or you turn the alert off.
+- Only if you turn on payment alerts for a wallet: that wallet's address, or for an extended public key the next few unused receive addresses, plus the wallet's name and the total amount ever received by those addresses. The extended public key itself is never sent. They are deleted when you turn the alert off.
 
-Portfolio transactions, wallet addresses, extended public keys and balances are never sent to the alerts server. Notifications are delivered through Expo's push service and Apple Push Notification service, which receive the push token and the notification text.
+Portfolio transactions, extended public keys and balances are never sent to the alerts server, and wallet addresses only as described above when you turn on payment alerts. Notifications are delivered through Expo's push service and Apple Push Notification service, which receive the push token and the notification text.
 
 ### 2.5 Market/network data
 The app requests public market and blockchain-related data from third-party endpoints (for example, pricing and network statistics providers). Those providers may receive your IP address and standard request metadata.
@@ -69,7 +71,7 @@ We may disclose information if required by law.
 You can:
 - Delete local app data from in-app settings (where available) or by uninstalling the app.
 - Disable notifications at the OS level.
-- Stop server-side alerts by turning off alerts, the Daily Market Brief and the Weekly Recap in the app.
+- Stop server-side alerts by turning off alerts, the Daily Market Brief, the Weekly Recap, transaction alerts and wallet payment alerts in the app.
 - Manage subscriptions in your Apple ID subscription settings.
 
 ## 8. Children
