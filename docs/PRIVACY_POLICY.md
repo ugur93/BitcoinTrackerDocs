@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date:** 2026-09-28  
+**Effective date:** 2026-10-03  
 **App:** Bitcoin Tracker  
 **Contact:** proventuspro@protonmail.com
 
@@ -23,8 +23,8 @@ If you use paid features, subscription and entitlement events are processed via 
 - Purchase state / entitlement status.
 - Anonymous app user identifiers used for subscription state.
 
-### 2.4 Instant alerts and daily brief (Hodler Pro)
-If you subscribe to Hodler Pro and allow notifications, the app sends the following to our alerts server (hosted on Cloudflare) so it can notify you when the app is closed:
+### 2.4 Instant alerts, daily brief and weekly recap
+If you create price alerts and allow notifications, the app sends the following to our alerts server (hosted on Cloudflare) so it can notify you when the app is closed. Free users send up to three price alerts; indicator alerts, the daily brief, the weekly recap and on-chain alerts are part of Hodler Pro:
 - Your price alerts (direction, target price, currency, on/off state).
 - Your daily brief and weekly recap settings (on/off, delivery time, time zone, currency).
 - The kind and threshold of each indicator alert (24h move, Mayer Multiple, fee rate or Hash Ribbons).
@@ -52,7 +52,7 @@ If this changes, we will update this policy and request required platform permis
 
 ## 5. Data Storage and Retention
 - Portfolio data, wallet addresses and extended public keys are stored only on your device.
-- Alert data is stored on your device. For Hodler Pro users with notifications allowed, alerts, daily brief and weekly recap settings are also stored on the alerts server. They are deleted when you turn off all alerts, the daily brief and the weekly recap, when your subscription lapses and the app next syncs, or when the push token stops working (for example after you uninstall the app). Records of fired alerts are kept for up to 30 days.
+- Alert data is stored on your device. With notifications allowed, your alerts (and, for Hodler Pro, daily brief and weekly recap settings) are also stored on the alerts server. They are deleted when you delete or turn off all of them, when the push token stops working (for example after you uninstall the app), or, for Pro-only items, when your subscription lapses. Records of fired alerts are kept for up to 30 days.
 - Tax reports (CSV/PDF) are generated on your device and only leave it if you choose to share them.
 - Subscription entitlement data is managed by Apple/RevenueCat as required for purchases.
 - Retention duration depends on your device state, app uninstall, and provider retention policies.
@@ -60,7 +60,7 @@ If this changes, we will update this policy and request required platform permis
 ## 6. Data Sharing
 We may share limited data with service providers strictly to operate the app:
 - **RevenueCat** (subscription management).
-- **Cloudflare** (hosts the alerts server for Hodler Pro alerts, daily brief and weekly recap).
+- **Cloudflare** (hosts the alerts server for price alerts and the Hodler Pro daily brief, weekly recap and indicator alerts).
 - **Expo** and **Apple Push Notification service** (deliver push notifications).
 - **Apple** (in-app purchase processing).
 - **Market/network data providers** used by the app (for example CoinGecko, Coinbase, Yahoo Finance, Blockstream and mempool.space). They receive requests for public data, not your portfolio.
